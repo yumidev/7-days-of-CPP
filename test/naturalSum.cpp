@@ -12,7 +12,7 @@ int main() {
     cout << "Your number is not bigger than 1";
     return 0;
   }
-  
+
   result = sum(n);
 
   cout << "Sum of the natural numbers from "<<n<<" to 1 is "<<result<<endl;
@@ -20,11 +20,7 @@ int main() {
 }
 
 int sum(int n) {
-  if (n < 0)
-    return -1;
-  if (n == 0)
-    return 0;
-  else {
+  if (n != 0)
     return n + sum(n-1);
-  }
+  return 0;
 }
